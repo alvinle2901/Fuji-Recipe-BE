@@ -15,18 +15,18 @@ const presetTypeDef = `#graphql
     color: Int!
     noiseReduction: Int!
     sharpening: Int!
-    clarity: Int!
-    grainEffect: GrainEffect!
-    colorChromeEffect: String!
-    colorChromeEffectBlue: String!
+    clarity: Int
+    grainEffect: GrainEffect
+    colorChromeEffect: String
+    colorChromeEffectBlue: String
     whiteBalance: WhiteBalance!
     iso: ISOSettings!
-    exposureCompensation: ExposureCompensation!
+    exposureCompensation: ExposureCompensation
   }
 
   type GrainEffect {
-    strength: String!
-    size: String!
+    strength: String
+    size: String
   }
 
   type WhiteBalance {
@@ -61,13 +61,13 @@ const presetTypeDef = `#graphql
     color: Int!
     noiseReduction: Int!
     sharpening: Int!
-    clarity: Int!
-    grainEffect: GrainEffectInput!
-    colorChromeEffect: String!
-    colorChromeEffectBlue: String!
+    clarity: Int
+    grainEffect: GrainEffectInput
+    colorChromeEffect: String
+    colorChromeEffectBlue: String
     whiteBalance: WhiteBalanceInput!
     iso: ISOSettingsInput!
-    exposureCompensation: ExposureCompensationInput!
+    exposureCompensation: ExposureCompensationInput
   }
 
   input GrainEffectInput {
@@ -87,8 +87,8 @@ const presetTypeDef = `#graphql
   }
 
   input ExposureCompensationInput {
-    min: Float!
-    max: Float!
+    min: Float
+    max: Float
   }
 
   # Query and Mutation types for managing presets

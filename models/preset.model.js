@@ -21,7 +21,7 @@ const presetSchema = new mongoose.Schema({
     },
     dynamicRange: {
       type: String,
-      enum: ["DR100", "DR200", "DR400"],
+      enum: ["DR100", "DR200", "DR400", "Auto"],
       default: "DR200"
     },
     highlight: {
@@ -54,29 +54,24 @@ const presetSchema = new mongoose.Schema({
       type: Number,
       min: -5,
       max: 5,
-      default: 3
     },
     grainEffect: {
       strength: {
         type: String,
         enum: ["Off", "Weak", "Strong"],
-        default: "Weak"
       },
       size: {
         type: String,
-        enum: ["Small", "Large"],
-        default: "Small"
+        enum: ["Small", "Large", "Off"],
       }
     },
     colorChromeEffect: {
       type: String,
       enum: ["Off", "Weak", "Strong"],
-      default: "Strong"
     },
     colorChromeEffectBlue: {
       type: String,
       enum: ["Off", "Weak", "Strong"],
-      default: "Weak"
     },
     whiteBalance: {
       mode: {

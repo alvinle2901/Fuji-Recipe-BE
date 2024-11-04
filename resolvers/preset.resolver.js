@@ -2,7 +2,7 @@ import Preset from '../models/preset.model.js';
 
 const presetResolver = {
   Query: {
-    getAllPresets: async (_, __, context) => {
+    getAllPresets: async () => {
       try {
         const presets = await Preset.find();
         return presets;

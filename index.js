@@ -31,7 +31,10 @@ await server.start();
 // and our expressMiddleware function.
 app.use(
 	"/",
-	cors(),
+	cors({
+		origin: "http://192.168.137.1:3000",
+		credentials: true,
+	}),
 	express.json(),
 	// expressMiddleware accepts the same arguments:
 	// an Apollo Server instance and optional configuration options
@@ -44,4 +47,4 @@ app.use(
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
 await connectDB();
 
-console.log(`🚀 Server ready at http://localhost:4000/`);
+console.log(`🚀 Server ready at http://192.168.137.1:4000/`);
