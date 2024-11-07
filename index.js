@@ -11,8 +11,11 @@ import mergedResolvers from "./resolvers/index.js";
 import mergedTypeDefs from "./typeDefs/index.js";
 
 import { connectDB } from "./db/connectDB.js";
+import job from "./cron.js";
 
 dotenv.config();
+
+job.start();
 
 const app = express();
 
